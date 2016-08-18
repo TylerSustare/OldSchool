@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1445825032 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part1\cirlistdeq.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"cirListDeq.h"
+
+1445495908 c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part1\cirlistdeq.h
+
+1445495908 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part1\main_deq.c
+	<stdio.h>
+	<stdlib.h>
+	"cirListDeq.h"
+
+1445806154 source:c:\users\sustare\documents\github\datastructuresinc\homework\week4\part1\main_deq.c
+	<stdio.h>
+	<stdlib.h>
+	"cirListDeq.h"
+
+1445806154 c:\users\sustare\documents\github\datastructuresinc\homework\week4\part1\cirlistdeq.h
+
+1445823742 source:c:\users\sustare\documents\github\datastructuresinc\homework\week4\part1\cirlistdeq.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"cirListDeq.h"
+

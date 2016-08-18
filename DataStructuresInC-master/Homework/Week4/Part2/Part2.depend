@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1445497535 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part2\list.c
+	"listbag.h"
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+
+1445495908 c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part2\listbag.h
+
+1445495908 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part2\listbag.c
+	"listbag.h"
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+
+1445495908 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week4\part2\main_bag.c
+	"listbag.h"
+	<malloc.h>
+	<stdio.h>
+	<stdlib.h>
+
+1445837964 source:c:\users\sustare\documents\github\datastructuresinc\homework\week4\part2\listbag.c
+	"listbag.h"
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+
+1445806154 c:\users\sustare\documents\github\datastructuresinc\homework\week4\part2\listbag.h
+
+1445838209 source:c:\users\sustare\documents\github\datastructuresinc\homework\week4\part2\main_bag.c
+	"listbag.h"
+	<malloc.h>
+	<stdio.h>
+	<stdlib.h>
+
+1445837404 source:c:\users\sustare\documents\github\datastructuresinc\homework\week4\part2\list.c
+	"listbag.h"
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+

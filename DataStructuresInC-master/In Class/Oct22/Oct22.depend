@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1445806154 source:c:\users\sustare\documents\github\datastructuresinc\in class\oct22\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

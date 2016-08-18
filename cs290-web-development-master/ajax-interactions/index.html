@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX Interactions</title>
+	<script>
+		//inline script to simplify grading.
+        var apiKey = "51da705806d6cfc92d74540c77c87385"
+        document.addEventListener('DOMContentLoaded', bindButtons);
+
+        function bindButtons() {
+            document.getElementById('citySubmit').addEventListener('click', function (event) {
+                var req = new XMLHttpRequest();
+                var sendInformation = { city: null, zip: null };
+                sendInformation.city = document.getElementById('city').value;
+                sendInformation.zip = document.getElementById('zip').value;;
+                if (!!sendInformation.city) {
+                    req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + sendInformation.city + "&appid=51da705806d6cfc92d74540c77c87385", false);
+                } else if (!!sendInformation.zip) {
+                    req.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + sendInformation.zip + "&appid=51da705806d6cfc92d74540c77c87385", false);
+                }
+                req.addEventListener('load', function () {
+                    if (req.status >= 200 && req.status < 400) {
+                        var response = JSON.parse(req.responseText);
+                        document.getElementById('cityResult').textContent = " " + response.name;
+                        document.getElementById('rain').textContent = " " + response["rain"]["3h"] + " international rain units";
+                        document.getElementById('currTemp').textContent = " " + response["main"]["temp"] + " hopefully in Kelvin";
+                        document.getElementById('humid').textContent = " " + response["main"]["humidity"] + "%";
+
+                    } else {
+                        console.log("Error in network request: " + req.statusText);
+                    }
+                });
+                req.send(null);
+                event.preventDefault();
+                /* If a POST request
+                * req.setRequestHeader('Content-Type', 'application/json');
+                * req.send(JSON.stringify(sendInformation));
+                */
+                /* for synchronous request
+                * req.send(null);
+                * var response = JSON.parse(req.responseText);
+                * document.getElementById('rain').textContent = " " + response["rain"]["3h"] + " international rain units";
+                * document.getElementById('currTemp').textContent = " " + response["main"]["temp"] + " hopefully in Kelvin";
+                * document.getElementById('humid').textContent = " " + response["main"]["humidity"] + "%";
+                * document.getElementById('cityResult').textContent = " " + response.name;
+                * event.preventDefault();
+                */
+                console.log(response);      // for error checking the response
+            })
+        }
+	</script>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Weather API</legend>
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+        <input type="submit" id="citySubmit">
+        <label for="zip">zip</label>
+        <input type="text" name="zip" id="zip">
+        <input type="submit" id="zipSubmit">
+    </fieldset>
+</form>
+<div>
+    <h2>Result</h2>
+    <ul>
+        <li><span>City:</span><span id="cityResult"></span></li>
+        <li><span>Current Temp:</span><span id="currTemp"></span></li>
+        <li><span>Humidity:</span><span id="humid"></span></li>
+        <li><span>Rain:</span><span id="rain"></span></li>
+    </ul>
+</div>
+</body>
+</html>

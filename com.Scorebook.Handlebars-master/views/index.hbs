@@ -1,0 +1,22 @@
+<h3>{{title}}</h3>
+<!--TODO: make all required-->
+<form action="/thankyou" method="post">
+    <input type="hidden" name="UserKey" value="temp">
+    <label for="name">Your Name:</label>
+    <input id="name" name="UserName" type="text" placeholder="Puddles">
+    <br /><br />
+    <label for="teamName">Team Name:</label>
+    <input id="teamName" name="TeamName" type="email" placeholder="Ducks">
+    <br /><br />
+    <label for="level">Level of Play:</label>
+    <input id="level" name="Level" type="password" placeholder="College">
+    <br /><br />
+    <label for="role">Your Role:</label>
+    <input type="radio" name="Role" value="parent"> Fan
+    <input type="radio" name="Role" value="coach"> Coach
+    <br /><br />
+    <label for="signUp">Sign Up For The Newsletter:</label>
+    <input type="checkbox" name="IsSignedUp" value="true">
+    <br /><br />
+    <input type="submit" value="Create User">
+</form>

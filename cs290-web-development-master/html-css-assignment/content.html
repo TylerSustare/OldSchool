@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+	<title>HTML/CSS Assignment</title>
+</head>
+<body>
+	<table>
+    <caption>A table to show stats about 5 of the best hitters in baseball history.</caption>
+        <thead>
+            <th></th>
+            <th>Ken Griffey Jr.</th>
+            <th>Babe Ruth</th>
+            <th>Alex Rodriguez</th>
+            <th>Chipper Jones</th>
+            <th>Barry Bonds</th>
+        </thead>
+        <tfoot>
+            <td colspan="2">Footer 1</td>
+            <td colspan="4">Footer 2</td>
+        </tfoot>
+        <tbody>
+           <tr>
+                <td><i>Batting Avg</i></td>
+                <td>.284</td>
+                <td>.342</td>
+                <td>.297</td>
+                <td>.303</td>
+                <td>.298</td>
+            </tr>            
+            <tr>
+                <td><i>Hits</i></td>
+                <td>2781</td>
+                <td>2872</td>
+                <td>3070</td>
+                <td>2726</td>
+                <td>2935</td>
+            </tr>
+            <tr>
+                <td><i>Home Runs</i></td>
+                <td>630</td>
+                <td>714</td>
+                <td>687</td>
+                <td>468</td>
+                <td>762</td>
+            </tr>
+            <tr>
+                <td><i>Steals</i></td>
+                <td>184</td>
+                <td>123</td>
+                <td>326</td>
+                <td>150</td>
+                <td>514</td>
+            </tr>
+            <tr>
+                <td><i>Bats L/R</i></td>
+                <td>Left</td>
+                <td>Left</td>
+                <td>Right</td>
+                <td>Switch</td>
+                <td>Left</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li>Tables seem OK</li>
+        <li>Lists are cool</li>
+        <li>Forms are the bees knees</li>
+    </ul>
+    <div class="outer-content">
+        <div class="inner-content">
+            <p>thing</p>
+        </div>
+    </div>
+    <br />
+    <form action="http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/classcontent/form_tests/check_request.php" method="get"><!-- get request will be passed in query string-->
+        <fieldset>
+            <legend>GET Some Data</legend>
+            <label>Name: <input type="text" name="text_input">
+            </label>
+            <br />
+            <label>Number: <input type="number" name="numerical_input">
+            </label>
+            <br />
+            <label>Password: <input type="password" name="password_input"></label>
+            <br />
+            <p>Candy Options</p>
+            <label>
+                <input type="radio" name="candy" value="snickers">Snickers<br>
+            </label>
+            <label>
+                <input type="radio" name="candy" value="skittles">Skittles<br>
+            </label>
+            <label>
+                <input type="radio" name="candy" value="mentos">Mentos<br>
+            </label>
+        </fieldset>
+    </form>
+    <br />
+    <form action="http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/classcontent/form_tests/check_request.php" method="post"><!-- get request will be passed in query string-->
+        <fieldset>
+            <legend>POST Some Data</legend>
+            <label>Name: <input type="text" name="text_input">
+            </label>
+            <br />
+            <label>Number: <input type="number" name="numerical_input">
+            </label>
+            <br />
+            <label>Password: <input type="password" name="password_input"></label>
+            <br />
+            <p>Candy Options</p>
+            <label>
+                <input type="radio" name="candy" value="snickers">Snickers<br>
+            </label>
+            <label>
+                <input type="radio" name="candy" value="skittles">Skittles<br>
+            </label>
+            <label>
+                <input type="radio" name="candy" value="mentos">Mentos<br>
+            </label>
+        </fieldset>
+    </form>
+    <script src="test.js"></script>
+</body>
+</html>

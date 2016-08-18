@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How-To</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <section id="middle">
+        <h1>Gotta Catch All The Data</h1>
+          <img id="pika" src="imgs/pikachu.jpg">
+          <p>
+            For this section we will be exploring the actual API calls to get Pokemon data. The <strike>easiest</strike> quickest way to make these calls to the API are through PHP using the <pre>file_get_contents()</pre> command. So if your boss is needing the Pokemon data this second, use the PHP methods I will be showing right now. The very sparse documentation on the PokeAPI shows us that (in V1) that we have the option to use several sections of data.
+          </p>
+          <br><br><hr>
+          <img id="lefty" src="imgs/api-ss1.png">
+          <p>
+            We have the option of using the types of data in the screenshot to the left. We will be demonstrating getting data from the <i>Pokemon</i> section, but the rules still apply for the other sections of the API.
+          </p>
+          <br><br>
+          <p>
+            Here is the most basic method to get a single Pokemon data.
+            <pre>
+&lt?php
+  $data = file_get_contents("http://pokeapi.co/api/v1/pokemon/1/")
+  $rData = json_decode($data, true);
+  echo ("Pokemon is ".$rData['name']);
+?>
+            </pre>
+          </p>
+          <p>
+            So what's going on here? <br> Well the <pre-i>&lt?php ?></pre-i> section just tells that we are using PHP to get our data as opposed to Node.js or C# or another server side language.<br>
+            <pre-i>$data = file_get_contents("http://pokeapi.co/api/v1/pokemon/1/")</pre-i> This is where the magic starts to happen. The file_get_contents() gets JSON (JavaScript Object Notation) data from the API via a GET request as denoted in the parameter, which is a URL string. The <i>V1</i> tells us we want data from the V1 section of the API. The <i>pokemon</i> section tells the API we are interested in the Pokemon data sets. And finally the <i>1</i> at the end tells the API we are interested in the number 1 pokemon in the database. When you run the code you see the output is <res>Pokemon is Bulbasaur</res>
+          </p>
+          <br><br>
+          <p>
+            But wait... what about that funky looking line in the middle? Well now if you've been following along at home you might notice that the GET request to the API returns a JOSN object. It is not so easy to simply spew back JSON data so we have to do some "Decoding" of the JSON we get back from the API. What the line <pre-i>  $rData = json_decode($data, true);</pre-i> is actually doing is taking the raw JSON we get and pushing it onto an array that we can access certain <i>values</i> by their <i>key</i>. Remeber JSON is organized into {key:value} pairs. By accessing the $rData['name'] property we can use the name of the pokemon we got back even if we don't know it. The 'name' property will always give us the name of the Pokemon when we use this GET request.
+            <br>
+            In the final section, we will show you how to pick a great starting lineup of Pokemon based on a Type and other parameters.
+          </p>
+          <form action="lineup.html">
+            <input type="submit" value="Go to Next Section">
+          </form>
+
+
+
+    </section>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

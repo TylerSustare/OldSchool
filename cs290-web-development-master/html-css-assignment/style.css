@@ -1,0 +1,41 @@
+	table {
+    border-style: double;
+    border-spacing: 1px;
+}
+
+table th {
+    font-style: italic;
+}
+
+table td {
+    border-style: solid;
+    border-color: black;
+    border-width: thin
+}
+
+tr:nth-of-type(even){
+    background-color: blue;
+    color: yellow;
+}
+
+tbody tr:nth-of-type(odd){
+    background-color: green;
+}
+
+.outer-content{
+	background-color: pink;
+	border-style: solid;
+	border-color: pink;
+	text-align: center;
+	min-height: 20px;
+}
+
+.inner-content p{
+	border-style: solid;
+	border-color: blue;
+	background-color: blue;
+	width: 75%;
+	position: relative;
+	left: 12.5%;
+	line-height: 1;
+}

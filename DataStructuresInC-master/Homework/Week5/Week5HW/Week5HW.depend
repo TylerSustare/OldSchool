@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1446392729 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week5\skeleton\skiplist_main.c
+	"skipList.h"
+	"stdlib.h"
+
+1446392729 c:\users\tyler_000\documents\github\datastructuresinc\homework\week5\skeleton\skiplist.h
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	<assert.h>
+
+1446397670 source:c:\users\tyler_000\documents\github\datastructuresinc\homework\week5\skeleton\skiplist.c
+	"skipList.h"
+	"stdlib.h"
+	"time.h"
+

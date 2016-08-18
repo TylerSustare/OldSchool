@@ -1,0 +1,5 @@
+
+The total bill for your dinner at q should be $15.00
+
+Total with tip will be $17.70
+Person 1 owes: 17.70

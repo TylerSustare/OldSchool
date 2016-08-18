@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1444597136 source:c:\users\tyler\documents\github\datastructuresinc\homework\week2\ex2\ex2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

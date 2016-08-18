@@ -1,0 +1,1 @@
+./Debug/main.c.o ./Debug/sandbox.c.o ./Debug/multi-dimentional-arrays.c.o ./Debug/restaurant.c.o
