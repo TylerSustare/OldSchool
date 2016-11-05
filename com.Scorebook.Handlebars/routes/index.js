@@ -37,7 +37,7 @@ router.post('/thankyou', function(req,res, next) {
 
   // request to lambda function
   request({
-    "url": "https://ph038d4at3.execute-api.us-west-2.amazonaws.com/sustare_test/sustaredynamo",
+    "url": "https://...dynamodb",
     "method": "POST",
     "headers": {
       "Content-Type": "application/json"
@@ -68,7 +68,7 @@ router.get('/list', function(req, res, next) {
 
   // request to lambda function
   request({
-    "url": "https://ph038d4at3.execute-api.us-west-2.amazonaws.com/sustare_test/sustaredynamo",
+    "url": "https://...dynamodb",
     "method": "POST",
     "headers": {
       "Content-Type": "application/json"
